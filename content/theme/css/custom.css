@@ -1,0 +1,25 @@
+body { 
+    background-color: #eee; 
+
+}   
+
+#strana {
+    width: 830px  ;
+    margin-right: auto; 
+    margin-left: auto; 
+}
+
+#obrazek {
+    width: 705px  ;
+    float:right;
+    text-align: right;
+}
+#ikony {
+    padding-top:200px;
+    text-align: left;
+}
+
+
+.stred {
+    text-align: center;
+}
