@@ -33,6 +33,8 @@
                 {% if DISPLAY_CATEGORIES_ON_MENU -%}
                 {% for cat, null in categories %}
                     <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                    <li><a href="{{ SITEURL }}/tags.html">Tagy</a></li>
+                    <li><a href="{{ SITEURL }}/archives.html">Archiv</a></li>
                 {% endfor %}
                 {% endif %}
                 </ul></nav>

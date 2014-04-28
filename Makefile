@@ -71,8 +71,10 @@ endif
 devserver:
 ifdef PORT
 	$(BASEDIR)/develop_server.sh restart $(PORT)
+	sleep 1; iceweasel "localhost:$(PORT)"
 else
 	$(BASEDIR)/develop_server.sh restart
+	sleep 1; iceweasel "localhost:8000"
 endif
 
 stopserver:

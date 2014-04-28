@@ -22,18 +22,22 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 GITHUB_URL = 'http://github.com/tlapicka'
-TWITTER_USERNAME = 'TlapickaNet'
+#TWITTER_USERNAME = 'TlapickaNet'
+DISQUS_SITENAME = "tlapicka"
 
 # Blogroll
 LINKS = (
     ('www.vojtechkodet.cz', 'http://www.vojtechkodet.cz'),
-    ('Mulujte se', 'http://milujte.se'),
+    ('Milujte se', 'http://milujte.se'),
     ('Ron Wyatt', 'http://www.b-a-n.cz/informace.html'),
     ('Stvoření?', 'http://www.stvoreni.cz/'),
     ('MatPlotLib', 'http://matplotlib.org'),
     ('NumPy', 'http://www.numpy.org/'),
     ('SciPy', 'http://scipy.org/'),
     ('Zim - A Desktop Wiki', 'http://zim-wiki.org/'),
+    ('VOŠ a SPŠe Olomouc', 'http://www.spseol.cz/'),
+    ('Antispam', 'http://antispam.er.cz'),
+    ('CheckIO', 'http://www.checkio.org/')
 )
 
 # Social widget
@@ -41,13 +45,12 @@ SOCIAL = (
     ('Github', 'http://github.com/tlapicka'),
     ('Twitter', 'http://twitter.com/TlapickaNet'),
     ('G+', 'https://plus.google.com/106541283459415810809'),
-    ('Hroch', 'http://hroch.spseol.cz/~nozka/'),
     ('YouTube', 'https://www.youtube.com/user/YouTlapickaTube'),
     ('Wikipedista', 'http://cs.wikipedia.org/wiki/Wikipedista:Tlapicka'),
     ('Wikiobčan',
         'http://commons.wikimedia.org/wiki/Special:ListFiles/Tlapicka'),
     ('Wikispisovatel', 'http://cs.wikibooks.org/wiki/User:Tlapicka'),
-    ('VOŠ a SPŠe Olomouc', 'http://www.spseol.cz/'),
+    ('Můj školní hroch (web)', 'http://hroch.spseol.cz/~nozka/'),
 )
 
 DEFAULT_PAGINATION = 10
@@ -55,9 +58,11 @@ DEFAULT_PAGINATION = 10
 MD_EXTENSIONS = [
     'codehilite(css_class=highlight)',
     'extra',
-    'headerid(level=3)',
+    'headerid(level=2)',
     'toc',
 ]
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+STATIC_PATHS = ['images', 'img']
