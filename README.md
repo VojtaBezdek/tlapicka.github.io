@@ -3,7 +3,7 @@ Můj blog
 
 Toto je můj blog. Pro jeho tvorbu používám skvělý a úžasný [pelican][].
 
-* Větev [main](https://github.com/tlapicka/tlapicka.github.io/tree/main) 
+* Větev [master](https://github.com/tlapicka/tlapicka.github.io/tree/master) 
   obsahuje vygnerované HTML.
 * Větev [pelican](https://github.com/tlapicka/tlapicka.github.io/tree/pelican) 
   obsahuje zdrojáky.
