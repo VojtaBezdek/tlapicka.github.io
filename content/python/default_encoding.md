@@ -19,7 +19,7 @@ diakritika v unicode řetězcích. Třeba:
     f.write('Loď čeří kýlem vodu v úžině')
     .....
 
-Python se v těchto snaží v těchto situacích unicode řetězec konvertovat do
+Python se snaží v těchto situacích unicode řetězec konvertovat do
 příslušné znakové sady. Problém je, že neví, která znaková sada je ta
 "příslušná" a proto končí s chybovým hlášením:
 

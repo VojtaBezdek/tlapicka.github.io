@@ -31,13 +31,17 @@ LINKS = (
     ('Milujte se', 'http://milujte.se'),
     ('Ron Wyatt', 'http://www.b-a-n.cz/informace.html'),
     ('Stvoření?', 'http://www.stvoreni.cz/'),
+    ('Manželství.cz', 'http://www.manzelstvi.cz/'),
+    ('Maria.cz', 'http://www.maria.cz/'),
+    ('Jsem pro život', 'http://prolife.cz/'),
+    ('Kurzy α', 'http://www.kurzyalfa.cz/'),
     ('MatPlotLib', 'http://matplotlib.org'),
     ('NumPy', 'http://www.numpy.org/'),
     ('SciPy', 'http://scipy.org/'),
     ('Zim - A Desktop Wiki', 'http://zim-wiki.org/'),
     ('VOŠ a SPŠe Olomouc', 'http://www.spseol.cz/'),
-    ('Antispam', 'http://antispam.er.cz'),
-    ('CheckIO', 'http://www.checkio.org/')
+    ('Antispam', 'http://antispam.er.cz/'),
+    ('Check I/O', 'http://www.checkio.org/'),
 )
 
 # Social widget
@@ -60,7 +64,11 @@ MD_EXTENSIONS = [
     'extra',
     'headerid(level=2)',
     'toc',
+    'linksShortcuts:Shortcuts',
 ]
+
+PIWIK_URL='yanek.cz/piwik'
+PIWIK_SITE_ID=2
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
