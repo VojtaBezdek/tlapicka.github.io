@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tlapička.net</title><link>http://tlapicka.net/</link><description></description><atom:link href="http://tlapicka.net/feeds/zpracovani-signalu.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 09 Apr 2014 13:21:00 +0200</lastBuildDate><item><title>Python pro zpracování signálů</title><link>http://tlapicka.net/python-pro-zpracovani-signalu.html</link><description>&lt;p&gt;Vyšla kniha 
+&lt;a href="https://www.springer.com/engineering/signals/book/978-3-319-01341-1"&gt;Python for Signal Processing&lt;/a&gt;.
+Tato kniha je k dispozici jako 
+&lt;a href="http://python-for-signal-processing.blogspot.cz/"&gt;blog&lt;/a&gt;
+ale také  jako 
+&lt;a href="http://ipython.org/notebook.html"&gt;IPython Notebook&lt;/a&gt;
+&lt;a href="https://github.com/unpingco/Python-for-Signal-Processing"&gt;na Githubu&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Python se mi jako nástroj pro zpracování signálů opravdu moc líbí. Je to hlavně
+díky knihovnám 
+&lt;a href="http://www.numpy.org/"&gt;NumPy&lt;/a&gt;,
+&lt;a href="http://scipy.org/"&gt;SciPy&lt;/a&gt; a 
+&lt;a href="http://matplotlib.org"&gt;Matplotlib&lt;/a&gt;.
+Kdysi jsem měl tu čest pracovat na &lt;a href="http://www.feec.vutbr.cz"&gt;VUT v Brně&lt;/a&gt; s
+programem &lt;a href="https://cs.wikipedia.org/wiki/Matlab"&gt;Matlab&lt;/a&gt;. Práce s výše
+zmíněnými knihovnami je vece podobná. &lt;/p&gt;
+&lt;p&gt;Python a jeho knihovny jsou zdarma a pro mé účely naprosto dostačující. Navíc
+se nemusím učit další jazyk a jeho ekosystém, takže s Pythonem si vystačím při
+programování malých konzolových udělátek, grafických aplikací, webu i
+zpracování signálů.&lt;/p&gt;
+&lt;p&gt;Já jsem nedávno udělal &lt;a href="http://nbviewer.ipython.org/github/tlapicka/IPythonNotebooks/tree/master/"&gt;malý pokus o organizaci svých
+poznámek&lt;/a&gt;
+k výše zmíněným knihovnám, který je k dipozici na mém &lt;a href="http://hroch.spseol.cz/~nozka/python/matplotlib/"&gt;školním
+webu&lt;/a&gt; a na
+&lt;a href="https://github.com/tlapicka/IPythonNotebooks"&gt;Githubu&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Výstup vypadá opravdu velice pěkně: &lt;br /&gt;
+&lt;img alt="Kvantovací šum" src="http://tlapicka.net/img/sum.png" /&gt;&lt;/p&gt;
+&lt;p&gt;A využití není jen v technice: &lt;br /&gt;
+&lt;img alt="Path parch demo" src="http://tlapicka.net/img/path_patch_demo.png" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://matplotlib.org/gallery.html"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://matplotlib.org/users/screenshots.html"&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marek Nožka</dc:creator><pubDate>Wed, 09 Apr 2014 13:21:00 +0200</pubDate><guid>tag:tlapicka.net,2014-04-09:python-pro-zpracovani-signalu.html</guid><category>python</category><category>zpracování signálů</category></item></channel></rss>
