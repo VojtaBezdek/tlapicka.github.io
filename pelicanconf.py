@@ -4,25 +4,26 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Marek No\u017eka'
 SITENAME = u'Tlapička.net'
-#SITEURL = 'http://tlapicka.net'
+# SITEURL = 'http://tlapicka.net'
 
 TIMEZONE = 'Europe/Prague'
 
 DEFAULT_LANG = u'cs'
-#LOCALE = ( 'cs_CZ' ,'en_US'  )
+# LOCALE = ( 'cs_CZ' ,'en_US'  )
 DEFAULT_DATE = 'fs'
 DEFAULT_CATEGORY = 'Blog'
 
 THEME = 'notmytlapicka'
-#TYPOGRIFY = True
+
+TYPOGRIFY = True
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
-GITHUB_URL = 'http://github.com/tlapicka'
-#TWITTER_USERNAME = 'TlapickaNet'
+GITHUB_URL = 'https://github.com/tlapicka/tlapicka.github.io'
+# TWITTER_USERNAME = 'TlapickaNet'
 DISQUS_SITENAME = "tlapicka"
 
 # Blogroll
@@ -50,6 +51,7 @@ SOCIAL = (
     ('Twitter', 'http://twitter.com/TlapickaNet'),
     ('G+', 'https://plus.google.com/106541283459415810809'),
     ('YouTube', 'https://www.youtube.com/user/YouTlapickaTube'),
+    ('Flickr', 'http://www.flickr.com/photos/tlapicka/'),
     ('Wikipedista', 'http://cs.wikipedia.org/wiki/Wikipedista:Tlapicka'),
     ('Wikiobčan',
         'http://commons.wikimedia.org/wiki/Special:ListFiles/Tlapicka'),
