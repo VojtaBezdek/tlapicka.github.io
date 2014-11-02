@@ -2,11 +2,9 @@
 <html lang="cs">
 <head>
         <meta charset="utf-8" />
-        <link rel="shortcut icon" href="http://tlapicka.net/theme/images/favicon.ico" />
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" />
         <title>Tlapička.net - python</title>
-        <link rel="stylesheet" href="http://tlapicka.net/theme/css/main.css" />
-        <link href="http://tlapicka.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tlapička.net Atom Feed" />
-        <link href="http://tlapicka.net/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Tlapička.net RSS Feed" />
+        <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -14,36 +12,36 @@
 </head>
 
 <body id="index" class="home">
-<a href="http://github.com/tlapicka">
+<a href="https://github.com/tlapicka/tlapicka.github.io">
 <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
 </a>
         <header id="banner" class="body">
-                <h1><a href="http://tlapicka.net/">Tlapička.net </a></h1>
+                <h1><a href="/">Tlapička.net </a></h1>
                 <nav><ul>
-                    <li><a href="http://tlapicka.net/pages/tlapicka.html">O mně</a></li>
-                    <li><a href="http://tlapicka.net/category/blog.html">Blog</a></li>
-                    <li><a href="http://tlapicka.net/tags.html">Tagy</a></li>
-                    <li><a href="http://tlapicka.net/archives.html">Archiv</a></li>
+                    <li><a href="/pages/tlapicka.html">O&nbsp;mně</a></li>
+                    <li><a href="/category/blog.html">Blog</a></li>
+                    <li><a href="/tags.html">Tagy</a></li>
+                    <li><a href="/archives.html">Archiv</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://tlapicka.net/vychozi-kodovani-v-pythonu.html">Výchozí kódování v Pythonu</a></h1>
+                    <h1 class="entry-title"><a href="/vychozi-kodovani-v-pythonu.html">Výchozí kódování v&nbsp;Pythonu</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2014-04-28T16:47:00">
                 Po 28 duben 2014
         </abbr>
 
         <address class="vcard author">
-                By <a class="url fn" href="http://tlapicka.net/author/marek-nozka.html">Marek Nožka</a>
+                By <a class="url fn" href="/author/marek-nozka.html">Marek Nožka</a>
         </address>
-<p>In <a href="http://tlapicka.net/category/blog.html">Blog</a>. </p>
-<p>tags: <a href="http://tlapicka.net/tag/python.html">python</a><a href="http://tlapicka.net/tag/io.html">I/O</a></p>
+<p>In <a href="/category/blog.html">Blog</a>. </p>
+<p>tags: <a href="/tag/python.html">python</a><a href="/tag/io.html">I/O</a></p>
 </footer><!-- /.post-info --><p>Občas se mi stane, že spouštím v Linuxu Python skript vytvořený ve Windows.
 Nejčastěji je to nějaká studentská práce, domácí úkol nebo něco podobného.
 Většinou není co řešit a program si prostě spustím, ale občas dělá problém
-diakritika v unicode řetězcích. Třeba:</p>
+diakritika v unicode řetězcích.&nbsp;Třeba:</p>
 <div class="highlight"><pre><span class="n">cislo</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">u&#39;napiš nějaké číslo&#39;</span><span class="p">)</span>
 <span class="o">.....</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;pokus.txt&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
@@ -54,14 +52,12 @@ diakritika v unicode řetězcích. Třeba:</p>
 
 <p>Python se snaží v těchto situacích unicode řetězec konvertovat do
 příslušné znakové sady. Problém je, že neví, která znaková sada je ta
-"příslušná" a proto končí s chybovým hlášením:</p>
+&#8220;příslušná&#8221; a proto končí s chybovým&nbsp;hlášením:</p>
 <div class="highlight"><pre><span class="gt">Traceback (most recent call last):</span>
 <span class="err">File &quot;kodovani.py&quot;, line 30, in &lt;module&gt;</span>
 <span class="go">    f.write(cestina)</span>
 <span class="go">UnicodeEncodeError: &#39;ascii&#39; codec can&#39;t encode character u&#39;\u010f&#39;</span>
 <span class="go">in position 2: ordinal not in range(128)</span>
-<span class="gt">Traceback (most recent call last):</span>
-<span class="err">File &quot;kodovani.py&quot;, line 30, in &lt;module&gt;</span>
 </pre></div>
 
 
@@ -82,7 +78,7 @@ pro standardní vstup/výstup je nastaveno na <code>UTF-8</code>.</p>
 
 <p>Pokud je třeba nějak měnit kódování standardního vstupu/výstupu je to možné
 udělat jednoduše přes proměnnou prostředí <code>PYTHONIOENCODING</code>. Výstup potom
-vypadá takto:</p>
+vypadá&nbsp;takto:</p>
 <div class="highlight"><pre><span class="gp">$</span> <span class="nv">PYTHONIOENCODING</span><span class="o">=</span>cp1250 ./kodovani.py
 <span class="go">default encoding:  utf-8</span>
 <span class="go">Loï v úin</span>
@@ -97,13 +93,11 @@ vstupu/výstupu. Jak tedy nastavit <code>defaultencoding</code>?. To se totiž p
 otevřených souborů nebo například u vestavěné funkce <code>raw_input()</code>.</p>
 <p>Nejjednodušší je použít funkci <code>sys.setdefaultencoding()</code>. Má to ale jeden malý
 háček. Takto funkce je dostupná pouze při spuštění Pythonu. Dále se setkáme s
-chybovým hlášením.</p>
+chybovým&nbsp;hlášením.</p>
 <div class="highlight"><pre><span class="gt">Traceback (most recent call last):</span>
 <span class="err">File &quot;kodovani.py&quot;, line 12, in &lt;module&gt;</span>
 <span class="go">    sys.setdefaultencoding(&quot;utf-8&quot;)</span>
 <span class="go">AttributeError: &#39;module&#39; object has no attribute &#39;setdefaultencoding&#39;</span>
-<span class="gt">Traceback (most recent call last):</span>
-<span class="err">File &quot;kodovani.py&quot;, line 12, in &lt;module&gt;</span>
 </pre></div>
 
 
@@ -121,7 +115,7 @@ chybovým hlášením.</p>
 
 <p>Druhý fígl je spustit Python s parametrem <code>-S</code>. Ten zakáže automatický import
 modulu <code>site</code>, který výchozí znakovou sadu nastavuje a funkci
-<code>setdefaultencoding</code> poté znepřístupní.</p>
+<code>setdefaultencoding</code> poté&nbsp;znepřístupní.</p>
 <div class="highlight"><pre><span class="c">#!/usr/bin/python2.7 -S</span>
 
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -143,7 +137,7 @@ někam do <code>PYTHONPATH</code> respektive do <code>sys.path</code>.</p>
 <dd><a href="http://stackoverflow.com/questions/11741574/how-to-set-the-default-encoding-to-utf-8-in-python">http://stackoverflow.com/questions/11741574/how-to-set-the-default-encoding-to-utf-8-in-python</a></dd>
 <dd><a href="http://stackoverflow.com/questions/2276200/changing-default-encoding-of-python">http://stackoverflow.com/questions/2276200/changing-default-encoding-of-python</a></dd>
 <dd><a href="http://stackoverflow.com/questions/7105441/how-to-set-default-encoding-in-python-setdefaultencoding-function-does-not-ex">http://stackoverflow.com/questions/7105441/how-to-set-default-encoding-in-python-setdefaultencoding-function-does-not-ex</a></dd>
-</dl><p>There are <a href="http://tlapicka.net/vychozi-kodovani-v-pythonu.html#disqus_thread">comments</a>.</p>                </article>
+</dl><p>There are <a href="/vychozi-kodovani-v-pythonu.html#disqus_thread">comments</a>.</p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Další zápisky</h1>
@@ -152,8 +146,8 @@ někam do <code>PYTHONPATH</code> respektive do <code>sys.path</code>.</p>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="http://tlapicka.net/python-pro-zpracovani-signalu.html" rel="bookmark"
-                           title="Permalink to Python pro zpracování signálů">Python pro zpracování signálů</a></h1>
+                    <h1><a href="/python-pro-zpracovani-signalu.html" rel="bookmark"
+                           title="Permalink to Python pro zpracování signálů">Python pro zpracování&nbsp;signálů</a></h1>
                 </header>
 
                 <div class="entry-content">
@@ -163,15 +157,15 @@ někam do <code>PYTHONPATH</code> respektive do <code>sys.path</code>.</p>
         </abbr>
 
         <address class="vcard author">
-                By <a class="url fn" href="http://tlapicka.net/author/marek-nozka.html">Marek Nožka</a>
+                By <a class="url fn" href="/author/marek-nozka.html">Marek Nožka</a>
         </address>
-<p>In <a href="http://tlapicka.net/category/blog.html">Blog</a>. </p>
-<p>tags: <a href="http://tlapicka.net/tag/python.html">python</a><a href="http://tlapicka.net/tag/zpracovani-signalu.html">zpracování signálů</a></p>
+<p>In <a href="/category/blog.html">Blog</a>. </p>
+<p>tags: <a href="/tag/python.html">python</a><a href="/tag/zpracovani-signalu.html">zpracování signálů</a></p>
 </footer><!-- /.post-info -->                <p>Vyšla kniha Python pro zpracování signálů.
 Lze ji zakoupit v podobě klasické knihy nebo
-ji číst elektronicky.</p>
-                <a class="readmore" href="http://tlapicka.net/python-pro-zpracovani-signalu.html">read more</a>
-<p>There are <a href="http://tlapicka.net/python-pro-zpracovani-signalu.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+ji číst&nbsp;elektronicky.</p>
+                <a class="readmore" href="/python-pro-zpracovani-signalu.html">read more</a>
+<p>There are <a href="/python-pro-zpracovani-signalu.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
             </article></li>
             </ol><!-- /#posts-list -->
 <p class="paginator">
@@ -202,13 +196,12 @@ ji číst elektronicky.</p>
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="http://tlapicka.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-                            <li><a href="http://tlapicka.net/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
 
                             <li><a href="http://github.com/tlapicka">Github</a></li>
                             <li><a href="http://twitter.com/TlapickaNet">Twitter</a></li>
                             <li><a href="https://plus.google.com/106541283459415810809">G+</a></li>
                             <li><a href="https://www.youtube.com/user/YouTlapickaTube">YouTube</a></li>
+                            <li><a href="http://www.flickr.com/photos/tlapicka/">Flickr</a></li>
                             <li><a href="http://cs.wikipedia.org/wiki/Wikipedista:Tlapicka">Wikipedista</a></li>
                             <li><a href="http://commons.wikimedia.org/wiki/Special:ListFiles/Tlapicka">Wikiobčan</a></li>
                             <li><a href="http://cs.wikibooks.org/wiki/User:Tlapicka">Wikispisovatel</a></li>
