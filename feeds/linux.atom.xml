@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tlapička.net</title><link href="http://tlapicka.net/" rel="alternate"></link><link href="http://tlapicka.net/feeds/linux.atom.xml" rel="self"></link><id>http://tlapicka.net/</id><updated>2014-10-31T14:57:00+01:00</updated><entry><title>Jak automaticky připojovat vzdálené diskové oddíly</title><link href="http://tlapicka.net/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html" rel="alternate"></link><updated>2014-10-31T14:57:00+01:00</updated><author><name>Marek Nožka</name></author><id>tag:tlapicka.net,2014-10-31:jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</id><summary type="html">&lt;h2 id="autofs"&gt;Autofs&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tlapička.net</title><link href="http://www.tlapicka.net/" rel="alternate"></link><link href="http://www.tlapicka.net/feeds/linux.atom.xml" rel="self"></link><id>http://www.tlapicka.net/</id><updated>2014-10-31T14:57:00+01:00</updated><entry><title>Jak automaticky připojovat vzdálené diskové oddíly</title><link href="http://www.tlapicka.net/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html" rel="alternate"></link><updated>2014-10-31T14:57:00+01:00</updated><author><name>Marek Nožka</name></author><id>tag:www.tlapicka.net,2014-10-31:jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</id><summary type="html">&lt;h2 id="autofs"&gt;Autofs&lt;/h2&gt;
 &lt;p&gt;Pomocí Autofs lze zařídit automatické připojení souborového systému při jeho
 prvním použití a jeho automatické odpojení při nečinnosti. Vše se děje na
 základě přednastaveného mapování. Takto lze připojovat vyměnitelné médium,
-Sambu nebo jakékoliv FUSE. &lt;/p&gt;
+Sambu nebo jakékoliv &lt;span class="caps"&gt;FUSE&lt;/span&gt;. &lt;/p&gt;
 &lt;p&gt;O Autofs jsem se dozvěděl náhodou v jedné e-mailové konferenci, kde se řešil
 úplně jiný problém. Mě při této příležitosti napadlo, že si takto můžu připojit
 své vzdálené disky, které jsem zatím, připojoval ručně pomocí příkazu &lt;code&gt;sshfs&lt;/code&gt;.
 V tomto zápisku se tedy zaměřím na &lt;a href="http://packages.debian.org/sshfs"&gt;sshfs&lt;/a&gt;, 
 ale &lt;a href="http://duckduckgo.com/?q=autofs Samba"&gt;našel&lt;/a&gt; jsem &lt;a href="http://www.howtoforge.com/accessing_windows_or_samba_shares_using_autofs"&gt;hezký návod i pro Sambu&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="ssh-klice-pro-roota"&gt;SSH klíče pro Roota&lt;/h2&gt;
+&lt;h2 id="ssh-klice-pro-roota"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; klíče pro&amp;nbsp;Roota&lt;/h2&gt;
 &lt;p&gt;Nejprve je třeba zajistit, aby se lokální uživatel &lt;code&gt;root&lt;/code&gt; dostal ke vzdálenému
-uživatelskému účtu a nemusel zapisovat heslo -- vše se má dít automaticky. To
-lze zajistit pomocí SSH klíčů.&lt;/p&gt;
+uživatelskému účtu a nemusel zapisovat heslo &amp;#8212; vše se má dít automaticky. To
+lze zajistit pomocí &lt;span class="caps"&gt;SSH&lt;/span&gt;&amp;nbsp;klíčů.&lt;/p&gt;
 &lt;dl&gt;
-&lt;dt&gt;SSH a SSH klíče:&lt;/dt&gt;
-&lt;dd&gt;&lt;a href="http://www.root.cz/serialy/pokrocile-vlastnosti-openssh/"&gt;Seriál Pokročilé vlastnosti OpenSSH&lt;/a&gt;&lt;/dd&gt;
-&lt;dd&gt;&lt;a href="http://www.root.cz/clanky/jak-se-prihlasovat-na-ssh-bez-zadavani-hesla/"&gt;Jak se přihlašovat na SSH bez zadávání hesla&lt;/a&gt;&lt;/dd&gt;
-&lt;dd&gt;&lt;a href="http://www.abclinuxu.cz/clanky/bezpecnost/openssh-vice-nez-jen-secure-shell"&gt;OpenSSH - více než jen Secure Shell&lt;/a&gt;&lt;/dd&gt;
-&lt;dd&gt;&lt;a href="https://www.abclinuxu.cz/clanky/bezpecnost/openssh-bezpecne-a-pohodlne"&gt;OpenSSH - bezpečně a pohodlně&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; a &lt;span class="caps"&gt;SSH&lt;/span&gt;&amp;nbsp;klíče:&lt;/dt&gt;
+&lt;dd&gt;&lt;a href="http://www.root.cz/serialy/pokrocile-vlastnosti-openssh/"&gt;Seriál Pokročilé vlastnosti&amp;nbsp;OpenSSH&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href="http://www.root.cz/clanky/jak-se-prihlasovat-na-ssh-bez-zadavani-hesla/"&gt;Jak se přihlašovat na &lt;span class="caps"&gt;SSH&lt;/span&gt; bez zadávání&amp;nbsp;hesla&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href="http://www.abclinuxu.cz/clanky/bezpecnost/openssh-vice-nez-jen-secure-shell"&gt;OpenSSH - více než jen Secure&amp;nbsp;Shell&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href="https://www.abclinuxu.cz/clanky/bezpecnost/openssh-bezpecne-a-pohodlne"&gt;OpenSSH - bezpečně a&amp;nbsp;pohodlně&lt;/a&gt;&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;p&gt;Vygenerujeme rootovi &lt;a href="http://en.wikipedia.com/wiki/keypair"&gt;keypair&lt;/a&gt;. Důležité je, aby byl privátní klíč 
 bez &lt;code&gt;passphrase&lt;/code&gt;. Při dotazu na &lt;code&gt;passphrase&lt;/code&gt; je tedy třeba zadat jen &lt;code&gt;Enter&lt;/code&gt;.&lt;/p&gt;
@@ -48,26 +48,26 @@ bez &lt;code&gt;passphrase&lt;/code&gt;. Při dotazu na &lt;code&gt;passphrase&l
 
 &lt;p&gt;Veřejný klíč je poté třeba dopravit na vzdálený počítač do souboru
 &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;. Pokud už soubor nějaké klíče obsahuje klíč se
-jednoduše připojí na konec.&lt;/p&gt;
-&lt;p&gt;Toto lze zařídit mnoha způsoby. Například takto:&lt;/p&gt;
+jednoduše připojí na&amp;nbsp;konec.&lt;/p&gt;
+&lt;p&gt;Toto lze zařídit mnoha způsoby. Například&amp;nbsp;takto:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;#&lt;/span&gt; ssh user@masina.nekde.tld &lt;span class="s1"&gt;&amp;#39;cat &amp;gt;&amp;gt;~/.ssh/authorized_keys&amp;#39;&lt;/span&gt; &amp;lt;~/.ssh/id_dsa.pub
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;V tomto okamžiku by mělo fungovat přihlášení roota ke vzdálenému počítači bez
-hesla, jen na základě klíče.&lt;/p&gt;
+hesla, jen na základě&amp;nbsp;klíče.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;#&lt;/span&gt; ssh user@masina.nekde.tld
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2 id="konfigurace-autofs"&gt;Konfigurace autofs&lt;/h2&gt;
-&lt;p&gt;Autofs je třeba nejprve naistalovat:&lt;/p&gt;
+&lt;h2 id="konfigurace-autofs"&gt;Konfigurace&amp;nbsp;autofs&lt;/h2&gt;
+&lt;p&gt;Autofs je třeba nejprve&amp;nbsp;naistalovat:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;#&lt;/span&gt; aptitude install autofs
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Poté vytvořím soubor s definicemi co a kam se bude připojovat. Řádky jsou
-poměrně dlouhé:&lt;/p&gt;
+poměrně&amp;nbsp;dlouhé:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;/etc/auto.sshfs&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;masina  -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#user@masina.tld:/home/user
 borec   -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#borec@jinde.tld:/home/stud/borec
@@ -77,29 +77,28 @@ borec   -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#borec@jinde.
 &lt;p&gt;&lt;code&gt;uid&lt;/code&gt; a &lt;code&gt;gid&lt;/code&gt; patří uživateli, na kterého se bude připojený souborový systém
 mapovat. Pokud neznáte své &lt;code&gt;uid&lt;/code&gt; neznáte stačí spustit příkaz &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Takto vytvořený soubor musíme zaregistrovat aby o něm Autofs věděl. To se dá
-zařídit v souboru &lt;code&gt;/etc/auto.master&lt;/code&gt;. Na konec jsem přidal řádek:&lt;/p&gt;
+zařídit v souboru &lt;code&gt;/etc/auto.master&lt;/code&gt;. Na konec jsem přidal&amp;nbsp;řádek:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;/mnt/sshfs   /etc/auto.sshfs --timeout=30
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Nyní je třeba službu restartovat, aby si všimla změn, které jsme provedli v
-konfiguraci.&lt;/p&gt;
+&lt;p&gt;Nyní je třeba službu restartovat, aby si všimla změn, které jsme provedli v&amp;nbsp;konfiguraci.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;#&lt;/span&gt; /etc/init.d/autofs restart
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2 id="jak-se-to-pouziva"&gt;Jak se to používá?&lt;/h2&gt;
+&lt;h2 id="jak-se-to-pouziva"&gt;Jak se to&amp;nbsp;používá?&lt;/h2&gt;
 &lt;p&gt;Jednoduše vstoupíte do adresáře &lt;code&gt;/mnt/sshfs/masina&lt;/code&gt; nebo si třeba vypíšete
 obsah adresáře &lt;code&gt;/mnt/sshfs/borec&lt;/code&gt;. Souborový systém se automaticky připojí
-jakmile na něj sáhnete. ... a po 30 sekundách, co na něj nesáhnete se
-automaticky odpojí.&lt;/p&gt;
+jakmile na něj sáhnete. &amp;#8230; a po 30 sekundách, co na něj nesáhnete se
+automaticky&amp;nbsp;odpojí.&lt;/p&gt;
 &lt;p&gt;Mě ještě trochu točilo, že složka &lt;code&gt;/mnt/sshfs&lt;/code&gt; je při odpojených vzdálených
 file-systémech prázdná. Když jsem chtěl její jméno doplnit tabulátorem shell si
-na tento adresář "sáhnul" a připojili se všechny oddíly. Proto jsem v souboru
-&lt;code&gt;/etc/default/autofs&lt;/code&gt; zapnul/odkomentoval volbu &lt;/p&gt;
+na tento adresář &amp;#8220;sáhnul&amp;#8221; a připojili se všechny oddíly. Proto jsem v souboru
+&lt;code&gt;/etc/default/autofs&lt;/code&gt; zapnul/odkomentoval&amp;nbsp;volbu &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;BROWSE_MODE=&amp;quot;yes&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Tím je zařízeno, že se moje &lt;code&gt;masina&lt;/code&gt; a &lt;code&gt;borec&lt;/code&gt; objeví v adresáři &lt;code&gt;/mnt/sshfs&lt;/code&gt;,
-i když jsou odpojené.&lt;/p&gt;</summary><category term="Linux"></category><category term="SSH"></category></entry></feed>
+i když jsou&amp;nbsp;odpojené.&lt;/p&gt;</summary><category term="Linux"></category><category term="SSH"></category></entry></feed>

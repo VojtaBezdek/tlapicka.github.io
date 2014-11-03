@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tlapička.net</title><link href="http://tlapicka.net/" rel="alternate"></link><link href="http://tlapicka.net/feeds/zpracovani-signalu.atom.xml" rel="self"></link><id>http://tlapicka.net/</id><updated>2014-04-09T13:21:00+02:00</updated><entry><title>Python pro zpracování signálů</title><link href="http://tlapicka.net/python-pro-zpracovani-signalu.html" rel="alternate"></link><updated>2014-04-09T13:21:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:tlapicka.net,2014-04-09:python-pro-zpracovani-signalu.html</id><summary type="html">&lt;p&gt;Vyšla kniha 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tlapička.net</title><link href="http://www.tlapicka.net/" rel="alternate"></link><link href="http://www.tlapicka.net/feeds/zpracovani-signalu.atom.xml" rel="self"></link><id>http://www.tlapicka.net/</id><updated>2014-04-09T13:21:00+02:00</updated><entry><title>Python pro zpracování signálů</title><link href="http://www.tlapicka.net/python-pro-zpracovani-signalu.html" rel="alternate"></link><updated>2014-04-09T13:21:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:www.tlapicka.net,2014-04-09:python-pro-zpracovani-signalu.html</id><summary type="html">&lt;p&gt;Vyšla kniha 
 &lt;a href="https://www.springer.com/engineering/signals/book/978-3-319-01341-1"&gt;Python for Signal Processing&lt;/a&gt;.
 Tato kniha je k dispozici jako 
 &lt;a href="http://python-for-signal-processing.blogspot.cz/"&gt;blog&lt;/a&gt;
@@ -11,22 +11,22 @@ díky knihovnám
 &lt;a href="http://www.numpy.org/"&gt;NumPy&lt;/a&gt;,
 &lt;a href="http://scipy.org/"&gt;SciPy&lt;/a&gt; a 
 &lt;a href="http://matplotlib.org"&gt;Matplotlib&lt;/a&gt;.
-Kdysi jsem měl tu čest pracovat na &lt;a href="http://www.feec.vutbr.cz"&gt;VUT v Brně&lt;/a&gt; s
+Kdysi jsem měl tu čest pracovat na &lt;a href="http://www.feec.vutbr.cz"&gt;&lt;span class="caps"&gt;VUT&lt;/span&gt; v Brně&lt;/a&gt; s
 programem &lt;a href="https://cs.wikipedia.org/wiki/Matlab"&gt;Matlab&lt;/a&gt;. Práce s výše
-zmíněnými knihovnami je vece podobná. &lt;/p&gt;
+zmíněnými knihovnami je vece&amp;nbsp;podobná. &lt;/p&gt;
 &lt;p&gt;Python a jeho knihovny jsou zdarma a pro mé účely naprosto dostačující. Navíc
 se nemusím učit další jazyk a jeho ekosystém, takže s Pythonem si vystačím při
 programování malých konzolových udělátek, grafických aplikací, webu i
-zpracování signálů.&lt;/p&gt;
+zpracování&amp;nbsp;signálů.&lt;/p&gt;
 &lt;p&gt;Já jsem nedávno udělal &lt;a href="http://nbviewer.ipython.org/github/tlapicka/IPythonNotebooks/tree/master/"&gt;malý pokus o organizaci svých
 poznámek&lt;/a&gt;
 k výše zmíněným knihovnám, který je k dipozici na mém &lt;a href="http://hroch.spseol.cz/~nozka/python/matplotlib/"&gt;školním
 webu&lt;/a&gt; a na
 &lt;a href="https://github.com/tlapicka/IPythonNotebooks"&gt;Githubu&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Výstup vypadá opravdu velice pěkně: &lt;br /&gt;
-&lt;img alt="Kvantovací šum" src="http://tlapicka.net/img/sum.png" /&gt;&lt;/p&gt;
+&lt;img alt="Kvantovací šum" src="http://www.tlapicka.net/img/sum.png" /&gt;&lt;/p&gt;
 &lt;p&gt;A využití není jen v technice: &lt;br /&gt;
-&lt;img alt="Path parch demo" src="http://tlapicka.net/img/path_patch_demo.png" /&gt;&lt;/p&gt;
+&lt;img alt="Path parch demo" src="http://www.tlapicka.net/img/path_patch_demo.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://matplotlib.org/gallery.html"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://matplotlib.org/users/screenshots.html"&gt;Screenshots&lt;/a&gt;&lt;/li&gt;

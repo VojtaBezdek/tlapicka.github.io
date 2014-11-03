@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tlapička.net</title><link>/</link><description></description><atom:link href="/feeds/marek-nozka.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 31 Oct 2014 14:57:00 +0100</lastBuildDate><item><title>Jak automaticky připojovat vzdálené diskové oddíly</title><link>/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</link><description>&lt;h2 id="autofs"&gt;Autofs&lt;/h2&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tlapička.net</title><link>http://www.tlapicka.net/</link><description></description><atom:link href="http://www.tlapicka.net/feeds/marek-nozka.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 31 Oct 2014 14:57:00 +0100</lastBuildDate><item><title>Jak automaticky připojovat vzdálené diskové oddíly</title><link>http://www.tlapicka.net/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</link><description>&lt;h2 id="autofs"&gt;Autofs&lt;/h2&gt;
 &lt;p&gt;Pomocí Autofs lze zařídit automatické připojení souborového systému při jeho
 prvním použití a jeho automatické odpojení při nečinnosti. Vše se děje na
 základě přednastaveného mapování. Takto lze připojovat vyměnitelné médium,
@@ -101,7 +101,7 @@ na tento adresář &amp;#8220;sáhnul&amp;#8221; a připojili se všechny oddíl
 
 
 &lt;p&gt;Tím je zařízeno, že se moje &lt;code&gt;masina&lt;/code&gt; a &lt;code&gt;borec&lt;/code&gt; objeví v adresáři &lt;code&gt;/mnt/sshfs&lt;/code&gt;,
-i když jsou&amp;nbsp;odpojené.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marek Nožka</dc:creator><pubDate>Fri, 31 Oct 2014 14:57:00 +0100</pubDate><guid>tag:,2014-10-31:jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</guid><category>Linux</category><category>SSH</category></item><item><title>Výchozí kódování v Pythonu</title><link>/vychozi-kodovani-v-pythonu.html</link><description>&lt;p&gt;Občas se mi stane, že spouštím v Linuxu Python skript vytvořený ve Windows.
+i když jsou&amp;nbsp;odpojené.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marek Nožka</dc:creator><pubDate>Fri, 31 Oct 2014 14:57:00 +0100</pubDate><guid>tag:www.tlapicka.net,2014-10-31:jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</guid><category>Linux</category><category>SSH</category></item><item><title>Výchozí kódování v Pythonu</title><link>http://www.tlapicka.net/vychozi-kodovani-v-pythonu.html</link><description>&lt;p&gt;Občas se mi stane, že spouštím v Linuxu Python skript vytvořený ve Windows.
 Nejčastěji je to nějaká studentská práce, domácí úkol nebo něco podobného.
 Většinou není co řešit a program si prostě spustím, ale občas dělá problém
 diakritika v unicode řetězcích.&amp;nbsp;Třeba:&lt;/p&gt;
@@ -121,8 +121,6 @@ příslušné znakové sady. Problém je, že neví, která znaková sada je ta
 &lt;span class="go"&gt;    f.write(cestina)&lt;/span&gt;
 &lt;span class="go"&gt;UnicodeEncodeError: &amp;#39;ascii&amp;#39; codec can&amp;#39;t encode character u&amp;#39;\u010f&amp;#39;&lt;/span&gt;
 &lt;span class="go"&gt;in position 2: ordinal not in range(128)&lt;/span&gt;
-&lt;span class="gt"&gt;Traceback (most recent call last):&lt;/span&gt;
-&lt;span class="err"&gt;File &amp;quot;kodovani.py&amp;quot;, line 30, in &amp;lt;module&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -163,8 +161,6 @@ chybovým&amp;nbsp;hlášením.&lt;/p&gt;
 &lt;span class="err"&gt;File &amp;quot;kodovani.py&amp;quot;, line 12, in &amp;lt;module&amp;gt;&lt;/span&gt;
 &lt;span class="go"&gt;    sys.setdefaultencoding(&amp;quot;utf-8&amp;quot;)&lt;/span&gt;
 &lt;span class="go"&gt;AttributeError: &amp;#39;module&amp;#39; object has no attribute &amp;#39;setdefaultencoding&amp;#39;&lt;/span&gt;
-&lt;span class="gt"&gt;Traceback (most recent call last):&lt;/span&gt;
-&lt;span class="err"&gt;File &amp;quot;kodovani.py&amp;quot;, line 12, in &amp;lt;module&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -204,7 +200,7 @@ někam do &lt;code&gt;PYTHONPATH&lt;/code&gt; respektive do &lt;code&gt;sys.path
 &lt;dd&gt;&lt;a href="http://stackoverflow.com/questions/11741574/how-to-set-the-default-encoding-to-utf-8-in-python"&gt;http://stackoverflow.com/questions/11741574/how-to-set-the-default-encoding-to-utf-8-in-python&lt;/a&gt;&lt;/dd&gt;
 &lt;dd&gt;&lt;a href="http://stackoverflow.com/questions/2276200/changing-default-encoding-of-python"&gt;http://stackoverflow.com/questions/2276200/changing-default-encoding-of-python&lt;/a&gt;&lt;/dd&gt;
 &lt;dd&gt;&lt;a href="http://stackoverflow.com/questions/7105441/how-to-set-default-encoding-in-python-setdefaultencoding-function-does-not-ex"&gt;http://stackoverflow.com/questions/7105441/how-to-set-default-encoding-in-python-setdefaultencoding-function-does-not-ex&lt;/a&gt;&lt;/dd&gt;
-&lt;/dl&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marek Nožka</dc:creator><pubDate>Mon, 28 Apr 2014 16:47:00 +0200</pubDate><guid>tag:,2014-04-28:vychozi-kodovani-v-pythonu.html</guid><category>python</category><category>I/O</category></item><item><title>Python pro zpracování signálů</title><link>/python-pro-zpracovani-signalu.html</link><description>&lt;p&gt;Vyšla kniha 
+&lt;/dl&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marek Nožka</dc:creator><pubDate>Mon, 28 Apr 2014 16:47:00 +0200</pubDate><guid>tag:www.tlapicka.net,2014-04-28:vychozi-kodovani-v-pythonu.html</guid><category>python</category><category>I/O</category></item><item><title>Python pro zpracování signálů</title><link>http://www.tlapicka.net/python-pro-zpracovani-signalu.html</link><description>&lt;p&gt;Vyšla kniha 
 &lt;a href="https://www.springer.com/engineering/signals/book/978-3-319-01341-1"&gt;Python for Signal Processing&lt;/a&gt;.
 Tato kniha je k dispozici jako 
 &lt;a href="http://python-for-signal-processing.blogspot.cz/"&gt;blog&lt;/a&gt;
@@ -229,10 +225,10 @@ k výše zmíněným knihovnám, který je k dipozici na mém &lt;a href="http:/
 webu&lt;/a&gt; a na
 &lt;a href="https://github.com/tlapicka/IPythonNotebooks"&gt;Githubu&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Výstup vypadá opravdu velice pěkně: &lt;br /&gt;
-&lt;img alt="Kvantovací šum" src="/img/sum.png" /&gt;&lt;/p&gt;
+&lt;img alt="Kvantovací šum" src="http://www.tlapicka.net/img/sum.png" /&gt;&lt;/p&gt;
 &lt;p&gt;A využití není jen v technice: &lt;br /&gt;
-&lt;img alt="Path parch demo" src="/img/path_patch_demo.png" /&gt;&lt;/p&gt;
+&lt;img alt="Path parch demo" src="http://www.tlapicka.net/img/path_patch_demo.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://matplotlib.org/gallery.html"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://matplotlib.org/users/screenshots.html"&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marek Nožka</dc:creator><pubDate>Wed, 09 Apr 2014 13:21:00 +0200</pubDate><guid>tag:,2014-04-09:python-pro-zpracovani-signalu.html</guid><category>python</category><category>zpracování signálů</category></item></channel></rss>
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marek Nožka</dc:creator><pubDate>Wed, 09 Apr 2014 13:21:00 +0200</pubDate><guid>tag:www.tlapicka.net,2014-04-09:python-pro-zpracovani-signalu.html</guid><category>python</category><category>zpracování signálů</category></item></channel></rss>

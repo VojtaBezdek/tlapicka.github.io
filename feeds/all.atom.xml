@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tlapička.net</title><link href="http://tlapicka.net/" rel="alternate"></link><link href="http://tlapicka.net/feeds/all.atom.xml" rel="self"></link><id>http://tlapicka.net/</id><updated>2014-10-31T14:57:00+01:00</updated><entry><title>Jak automaticky připojovat vzdálené diskové oddíly</title><link href="http://tlapicka.net/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html" rel="alternate"></link><updated>2014-10-31T14:57:00+01:00</updated><author><name>Marek Nožka</name></author><id>tag:tlapicka.net,2014-10-31:jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</id><summary type="html">&lt;h2 id="autofs"&gt;Autofs&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tlapička.net</title><link href="http://www.tlapicka.net/" rel="alternate"></link><link href="http://www.tlapicka.net/feeds/all.atom.xml" rel="self"></link><id>http://www.tlapicka.net/</id><updated>2014-10-31T14:57:00+01:00</updated><entry><title>Jak automaticky připojovat vzdálené diskové oddíly</title><link href="http://www.tlapicka.net/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html" rel="alternate"></link><updated>2014-10-31T14:57:00+01:00</updated><author><name>Marek Nožka</name></author><id>tag:www.tlapicka.net,2014-10-31:jak-automaticky-pripojovat-vzdalene-diskove-oddily.html</id><summary type="html">&lt;h2 id="autofs"&gt;Autofs&lt;/h2&gt;
 &lt;p&gt;Pomocí Autofs lze zařídit automatické připojení souborového systému při jeho
 prvním použití a jeho automatické odpojení při nečinnosti. Vše se děje na
 základě přednastaveného mapování. Takto lze připojovat vyměnitelné médium,
-Sambu nebo jakékoliv FUSE. &lt;/p&gt;
+Sambu nebo jakékoliv &lt;span class="caps"&gt;FUSE&lt;/span&gt;. &lt;/p&gt;
 &lt;p&gt;O Autofs jsem se dozvěděl náhodou v jedné e-mailové konferenci, kde se řešil
 úplně jiný problém. Mě při této příležitosti napadlo, že si takto můžu připojit
 své vzdálené disky, které jsem zatím, připojoval ručně pomocí příkazu &lt;code&gt;sshfs&lt;/code&gt;.
 V tomto zápisku se tedy zaměřím na &lt;a href="http://packages.debian.org/sshfs"&gt;sshfs&lt;/a&gt;, 
 ale &lt;a href="http://duckduckgo.com/?q=autofs Samba"&gt;našel&lt;/a&gt; jsem &lt;a href="http://www.howtoforge.com/accessing_windows_or_samba_shares_using_autofs"&gt;hezký návod i pro Sambu&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="ssh-klice-pro-roota"&gt;SSH klíče pro Roota&lt;/h2&gt;
+&lt;h2 id="ssh-klice-pro-roota"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; klíče pro&amp;nbsp;Roota&lt;/h2&gt;
 &lt;p&gt;Nejprve je třeba zajistit, aby se lokální uživatel &lt;code&gt;root&lt;/code&gt; dostal ke vzdálenému
-uživatelskému účtu a nemusel zapisovat heslo -- vše se má dít automaticky. To
-lze zajistit pomocí SSH klíčů.&lt;/p&gt;
+uživatelskému účtu a nemusel zapisovat heslo &amp;#8212; vše se má dít automaticky. To
+lze zajistit pomocí &lt;span class="caps"&gt;SSH&lt;/span&gt;&amp;nbsp;klíčů.&lt;/p&gt;
 &lt;dl&gt;
-&lt;dt&gt;SSH a SSH klíče:&lt;/dt&gt;
-&lt;dd&gt;&lt;a href="http://www.root.cz/serialy/pokrocile-vlastnosti-openssh/"&gt;Seriál Pokročilé vlastnosti OpenSSH&lt;/a&gt;&lt;/dd&gt;
-&lt;dd&gt;&lt;a href="http://www.root.cz/clanky/jak-se-prihlasovat-na-ssh-bez-zadavani-hesla/"&gt;Jak se přihlašovat na SSH bez zadávání hesla&lt;/a&gt;&lt;/dd&gt;
-&lt;dd&gt;&lt;a href="http://www.abclinuxu.cz/clanky/bezpecnost/openssh-vice-nez-jen-secure-shell"&gt;OpenSSH - více než jen Secure Shell&lt;/a&gt;&lt;/dd&gt;
-&lt;dd&gt;&lt;a href="https://www.abclinuxu.cz/clanky/bezpecnost/openssh-bezpecne-a-pohodlne"&gt;OpenSSH - bezpečně a pohodlně&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt; a &lt;span class="caps"&gt;SSH&lt;/span&gt;&amp;nbsp;klíče:&lt;/dt&gt;
+&lt;dd&gt;&lt;a href="http://www.root.cz/serialy/pokrocile-vlastnosti-openssh/"&gt;Seriál Pokročilé vlastnosti&amp;nbsp;OpenSSH&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href="http://www.root.cz/clanky/jak-se-prihlasovat-na-ssh-bez-zadavani-hesla/"&gt;Jak se přihlašovat na &lt;span class="caps"&gt;SSH&lt;/span&gt; bez zadávání&amp;nbsp;hesla&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href="http://www.abclinuxu.cz/clanky/bezpecnost/openssh-vice-nez-jen-secure-shell"&gt;OpenSSH - více než jen Secure&amp;nbsp;Shell&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;&lt;a href="https://www.abclinuxu.cz/clanky/bezpecnost/openssh-bezpecne-a-pohodlne"&gt;OpenSSH - bezpečně a&amp;nbsp;pohodlně&lt;/a&gt;&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;p&gt;Vygenerujeme rootovi &lt;a href="http://en.wikipedia.com/wiki/keypair"&gt;keypair&lt;/a&gt;. Důležité je, aby byl privátní klíč 
 bez &lt;code&gt;passphrase&lt;/code&gt;. Při dotazu na &lt;code&gt;passphrase&lt;/code&gt; je tedy třeba zadat jen &lt;code&gt;Enter&lt;/code&gt;.&lt;/p&gt;
@@ -48,26 +48,26 @@ bez &lt;code&gt;passphrase&lt;/code&gt;. Při dotazu na &lt;code&gt;passphrase&l
 
 &lt;p&gt;Veřejný klíč je poté třeba dopravit na vzdálený počítač do souboru
 &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt;. Pokud už soubor nějaké klíče obsahuje klíč se
-jednoduše připojí na konec.&lt;/p&gt;
-&lt;p&gt;Toto lze zařídit mnoha způsoby. Například takto:&lt;/p&gt;
+jednoduše připojí na&amp;nbsp;konec.&lt;/p&gt;
+&lt;p&gt;Toto lze zařídit mnoha způsoby. Například&amp;nbsp;takto:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;#&lt;/span&gt; ssh user@masina.nekde.tld &lt;span class="s1"&gt;&amp;#39;cat &amp;gt;&amp;gt;~/.ssh/authorized_keys&amp;#39;&lt;/span&gt; &amp;lt;~/.ssh/id_dsa.pub
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;V tomto okamžiku by mělo fungovat přihlášení roota ke vzdálenému počítači bez
-hesla, jen na základě klíče.&lt;/p&gt;
+hesla, jen na základě&amp;nbsp;klíče.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;#&lt;/span&gt; ssh user@masina.nekde.tld
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2 id="konfigurace-autofs"&gt;Konfigurace autofs&lt;/h2&gt;
-&lt;p&gt;Autofs je třeba nejprve naistalovat:&lt;/p&gt;
+&lt;h2 id="konfigurace-autofs"&gt;Konfigurace&amp;nbsp;autofs&lt;/h2&gt;
+&lt;p&gt;Autofs je třeba nejprve&amp;nbsp;naistalovat:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;#&lt;/span&gt; aptitude install autofs
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Poté vytvořím soubor s definicemi co a kam se bude připojovat. Řádky jsou
-poměrně dlouhé:&lt;/p&gt;
+poměrně&amp;nbsp;dlouhé:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;/etc/auto.sshfs&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;masina  -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#user@masina.tld:/home/user
 borec   -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#borec@jinde.tld:/home/stud/borec
@@ -77,35 +77,34 @@ borec   -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#borec@jinde.
 &lt;p&gt;&lt;code&gt;uid&lt;/code&gt; a &lt;code&gt;gid&lt;/code&gt; patří uživateli, na kterého se bude připojený souborový systém
 mapovat. Pokud neznáte své &lt;code&gt;uid&lt;/code&gt; neznáte stačí spustit příkaz &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Takto vytvořený soubor musíme zaregistrovat aby o něm Autofs věděl. To se dá
-zařídit v souboru &lt;code&gt;/etc/auto.master&lt;/code&gt;. Na konec jsem přidal řádek:&lt;/p&gt;
+zařídit v souboru &lt;code&gt;/etc/auto.master&lt;/code&gt;. Na konec jsem přidal&amp;nbsp;řádek:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;/mnt/sshfs   /etc/auto.sshfs --timeout=30
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Nyní je třeba službu restartovat, aby si všimla změn, které jsme provedli v
-konfiguraci.&lt;/p&gt;
+&lt;p&gt;Nyní je třeba službu restartovat, aby si všimla změn, které jsme provedli v&amp;nbsp;konfiguraci.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;#&lt;/span&gt; /etc/init.d/autofs restart
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2 id="jak-se-to-pouziva"&gt;Jak se to používá?&lt;/h2&gt;
+&lt;h2 id="jak-se-to-pouziva"&gt;Jak se to&amp;nbsp;používá?&lt;/h2&gt;
 &lt;p&gt;Jednoduše vstoupíte do adresáře &lt;code&gt;/mnt/sshfs/masina&lt;/code&gt; nebo si třeba vypíšete
 obsah adresáře &lt;code&gt;/mnt/sshfs/borec&lt;/code&gt;. Souborový systém se automaticky připojí
-jakmile na něj sáhnete. ... a po 30 sekundách, co na něj nesáhnete se
-automaticky odpojí.&lt;/p&gt;
+jakmile na něj sáhnete. &amp;#8230; a po 30 sekundách, co na něj nesáhnete se
+automaticky&amp;nbsp;odpojí.&lt;/p&gt;
 &lt;p&gt;Mě ještě trochu točilo, že složka &lt;code&gt;/mnt/sshfs&lt;/code&gt; je při odpojených vzdálených
 file-systémech prázdná. Když jsem chtěl její jméno doplnit tabulátorem shell si
-na tento adresář "sáhnul" a připojili se všechny oddíly. Proto jsem v souboru
-&lt;code&gt;/etc/default/autofs&lt;/code&gt; zapnul/odkomentoval volbu &lt;/p&gt;
+na tento adresář &amp;#8220;sáhnul&amp;#8221; a připojili se všechny oddíly. Proto jsem v souboru
+&lt;code&gt;/etc/default/autofs&lt;/code&gt; zapnul/odkomentoval&amp;nbsp;volbu &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;BROWSE_MODE=&amp;quot;yes&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Tím je zařízeno, že se moje &lt;code&gt;masina&lt;/code&gt; a &lt;code&gt;borec&lt;/code&gt; objeví v adresáři &lt;code&gt;/mnt/sshfs&lt;/code&gt;,
-i když jsou odpojené.&lt;/p&gt;</summary><category term="Linux"></category><category term="SSH"></category></entry><entry><title>Výchozí kódování v Pythonu</title><link href="http://tlapicka.net/vychozi-kodovani-v-pythonu.html" rel="alternate"></link><updated>2014-04-28T16:47:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:tlapicka.net,2014-04-28:vychozi-kodovani-v-pythonu.html</id><summary type="html">&lt;p&gt;Občas se mi stane, že spouštím v Linuxu Python skript vytvořený ve Windows.
+i když jsou&amp;nbsp;odpojené.&lt;/p&gt;</summary><category term="Linux"></category><category term="SSH"></category></entry><entry><title>Výchozí kódování v Pythonu</title><link href="http://www.tlapicka.net/vychozi-kodovani-v-pythonu.html" rel="alternate"></link><updated>2014-04-28T16:47:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:www.tlapicka.net,2014-04-28:vychozi-kodovani-v-pythonu.html</id><summary type="html">&lt;p&gt;Občas se mi stane, že spouštím v Linuxu Python skript vytvořený ve Windows.
 Nejčastěji je to nějaká studentská práce, domácí úkol nebo něco podobného.
 Většinou není co řešit a program si prostě spustím, ale občas dělá problém
-diakritika v unicode řetězcích. Třeba:&lt;/p&gt;
+diakritika v unicode řetězcích.&amp;nbsp;Třeba:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cislo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;raw_input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;u&amp;#39;napiš nějaké číslo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;.....&lt;/span&gt;
 &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;pokus.txt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -116,14 +115,12 @@ diakritika v unicode řetězcích. Třeba:&lt;/p&gt;
 
 &lt;p&gt;Python se snaží v těchto situacích unicode řetězec konvertovat do
 příslušné znakové sady. Problém je, že neví, která znaková sada je ta
-"příslušná" a proto končí s chybovým hlášením:&lt;/p&gt;
+&amp;#8220;příslušná&amp;#8221; a proto končí s chybovým&amp;nbsp;hlášením:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gt"&gt;Traceback (most recent call last):&lt;/span&gt;
 &lt;span class="err"&gt;File &amp;quot;kodovani.py&amp;quot;, line 30, in &amp;lt;module&amp;gt;&lt;/span&gt;
 &lt;span class="go"&gt;    f.write(cestina)&lt;/span&gt;
 &lt;span class="go"&gt;UnicodeEncodeError: &amp;#39;ascii&amp;#39; codec can&amp;#39;t encode character u&amp;#39;\u010f&amp;#39;&lt;/span&gt;
 &lt;span class="go"&gt;in position 2: ordinal not in range(128)&lt;/span&gt;
-&lt;span class="gt"&gt;Traceback (most recent call last):&lt;/span&gt;
-&lt;span class="err"&gt;File &amp;quot;kodovani.py&amp;quot;, line 30, in &amp;lt;module&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -144,7 +141,7 @@ pro standardní vstup/výstup je nastaveno na &lt;code&gt;UTF-8&lt;/code&gt;.&lt
 
 &lt;p&gt;Pokud je třeba nějak měnit kódování standardního vstupu/výstupu je to možné
 udělat jednoduše přes proměnnou prostředí &lt;code&gt;PYTHONIOENCODING&lt;/code&gt;. Výstup potom
-vypadá takto:&lt;/p&gt;
+vypadá&amp;nbsp;takto:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; &lt;span class="nv"&gt;PYTHONIOENCODING&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;cp1250 ./kodovani.py
 &lt;span class="go"&gt;default encoding:  utf-8&lt;/span&gt;
 &lt;span class="go"&gt;Loï v úin&lt;/span&gt;
@@ -159,13 +156,11 @@ vstupu/výstupu. Jak tedy nastavit &lt;code&gt;defaultencoding&lt;/code&gt;?. To
 otevřených souborů nebo například u vestavěné funkce &lt;code&gt;raw_input()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Nejjednodušší je použít funkci &lt;code&gt;sys.setdefaultencoding()&lt;/code&gt;. Má to ale jeden malý
 háček. Takto funkce je dostupná pouze při spuštění Pythonu. Dále se setkáme s
-chybovým hlášením.&lt;/p&gt;
+chybovým&amp;nbsp;hlášením.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gt"&gt;Traceback (most recent call last):&lt;/span&gt;
 &lt;span class="err"&gt;File &amp;quot;kodovani.py&amp;quot;, line 12, in &amp;lt;module&amp;gt;&lt;/span&gt;
 &lt;span class="go"&gt;    sys.setdefaultencoding(&amp;quot;utf-8&amp;quot;)&lt;/span&gt;
 &lt;span class="go"&gt;AttributeError: &amp;#39;module&amp;#39; object has no attribute &amp;#39;setdefaultencoding&amp;#39;&lt;/span&gt;
-&lt;span class="gt"&gt;Traceback (most recent call last):&lt;/span&gt;
-&lt;span class="err"&gt;File &amp;quot;kodovani.py&amp;quot;, line 12, in &amp;lt;module&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -183,7 +178,7 @@ chybovým hlášením.&lt;/p&gt;
 
 &lt;p&gt;Druhý fígl je spustit Python s parametrem &lt;code&gt;-S&lt;/code&gt;. Ten zakáže automatický import
 modulu &lt;code&gt;site&lt;/code&gt;, který výchozí znakovou sadu nastavuje a funkci
-&lt;code&gt;setdefaultencoding&lt;/code&gt; poté znepřístupní.&lt;/p&gt;
+&lt;code&gt;setdefaultencoding&lt;/code&gt; poté&amp;nbsp;znepřístupní.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/usr/bin/python2.7 -S&lt;/span&gt;
 
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
@@ -205,7 +200,7 @@ někam do &lt;code&gt;PYTHONPATH&lt;/code&gt; respektive do &lt;code&gt;sys.path
 &lt;dd&gt;&lt;a href="http://stackoverflow.com/questions/11741574/how-to-set-the-default-encoding-to-utf-8-in-python"&gt;http://stackoverflow.com/questions/11741574/how-to-set-the-default-encoding-to-utf-8-in-python&lt;/a&gt;&lt;/dd&gt;
 &lt;dd&gt;&lt;a href="http://stackoverflow.com/questions/2276200/changing-default-encoding-of-python"&gt;http://stackoverflow.com/questions/2276200/changing-default-encoding-of-python&lt;/a&gt;&lt;/dd&gt;
 &lt;dd&gt;&lt;a href="http://stackoverflow.com/questions/7105441/how-to-set-default-encoding-in-python-setdefaultencoding-function-does-not-ex"&gt;http://stackoverflow.com/questions/7105441/how-to-set-default-encoding-in-python-setdefaultencoding-function-does-not-ex&lt;/a&gt;&lt;/dd&gt;
-&lt;/dl&gt;</summary><category term="python"></category><category term="I/O"></category></entry><entry><title>Python pro zpracování signálů</title><link href="http://tlapicka.net/python-pro-zpracovani-signalu.html" rel="alternate"></link><updated>2014-04-09T13:21:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:tlapicka.net,2014-04-09:python-pro-zpracovani-signalu.html</id><summary type="html">&lt;p&gt;Vyšla kniha 
+&lt;/dl&gt;</summary><category term="python"></category><category term="I/O"></category></entry><entry><title>Python pro zpracování signálů</title><link href="http://www.tlapicka.net/python-pro-zpracovani-signalu.html" rel="alternate"></link><updated>2014-04-09T13:21:00+02:00</updated><author><name>Marek Nožka</name></author><id>tag:www.tlapicka.net,2014-04-09:python-pro-zpracovani-signalu.html</id><summary type="html">&lt;p&gt;Vyšla kniha 
 &lt;a href="https://www.springer.com/engineering/signals/book/978-3-319-01341-1"&gt;Python for Signal Processing&lt;/a&gt;.
 Tato kniha je k dispozici jako 
 &lt;a href="http://python-for-signal-processing.blogspot.cz/"&gt;blog&lt;/a&gt;
@@ -217,22 +212,22 @@ díky knihovnám
 &lt;a href="http://www.numpy.org/"&gt;NumPy&lt;/a&gt;,
 &lt;a href="http://scipy.org/"&gt;SciPy&lt;/a&gt; a 
 &lt;a href="http://matplotlib.org"&gt;Matplotlib&lt;/a&gt;.
-Kdysi jsem měl tu čest pracovat na &lt;a href="http://www.feec.vutbr.cz"&gt;VUT v Brně&lt;/a&gt; s
+Kdysi jsem měl tu čest pracovat na &lt;a href="http://www.feec.vutbr.cz"&gt;&lt;span class="caps"&gt;VUT&lt;/span&gt; v Brně&lt;/a&gt; s
 programem &lt;a href="https://cs.wikipedia.org/wiki/Matlab"&gt;Matlab&lt;/a&gt;. Práce s výše
-zmíněnými knihovnami je vece podobná. &lt;/p&gt;
+zmíněnými knihovnami je vece&amp;nbsp;podobná. &lt;/p&gt;
 &lt;p&gt;Python a jeho knihovny jsou zdarma a pro mé účely naprosto dostačující. Navíc
 se nemusím učit další jazyk a jeho ekosystém, takže s Pythonem si vystačím při
 programování malých konzolových udělátek, grafických aplikací, webu i
-zpracování signálů.&lt;/p&gt;
+zpracování&amp;nbsp;signálů.&lt;/p&gt;
 &lt;p&gt;Já jsem nedávno udělal &lt;a href="http://nbviewer.ipython.org/github/tlapicka/IPythonNotebooks/tree/master/"&gt;malý pokus o organizaci svých
 poznámek&lt;/a&gt;
 k výše zmíněným knihovnám, který je k dipozici na mém &lt;a href="http://hroch.spseol.cz/~nozka/python/matplotlib/"&gt;školním
 webu&lt;/a&gt; a na
 &lt;a href="https://github.com/tlapicka/IPythonNotebooks"&gt;Githubu&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Výstup vypadá opravdu velice pěkně: &lt;br /&gt;
-&lt;img alt="Kvantovací šum" src="http://tlapicka.net/img/sum.png" /&gt;&lt;/p&gt;
+&lt;img alt="Kvantovací šum" src="http://www.tlapicka.net/img/sum.png" /&gt;&lt;/p&gt;
 &lt;p&gt;A využití není jen v technice: &lt;br /&gt;
-&lt;img alt="Path parch demo" src="http://tlapicka.net/img/path_patch_demo.png" /&gt;&lt;/p&gt;
+&lt;img alt="Path parch demo" src="http://www.tlapicka.net/img/path_patch_demo.png" /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://matplotlib.org/gallery.html"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://matplotlib.org/users/screenshots.html"&gt;Screenshots&lt;/a&gt;&lt;/li&gt;

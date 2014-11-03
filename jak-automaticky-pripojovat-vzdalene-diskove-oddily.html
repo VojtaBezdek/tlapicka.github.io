@@ -2,9 +2,11 @@
 <html lang="cs">
 <head>
         <meta charset="utf-8" />
-        <link rel="shortcut icon" href="/theme/images/favicon.ico" />
+        <link rel="shortcut icon" href="http://www.tlapicka.net/theme/images/favicon.ico" />
         <title>Jak automaticky připojovat vzdálené diskové oddíly</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link rel="stylesheet" href="http://www.tlapicka.net/theme/css/main.css" />
+        <link href="http://www.tlapicka.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Tlapička.net Atom Feed" />
+        <link href="http://www.tlapicka.net/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Tlapička.net RSS Feed" />
 
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -16,19 +18,19 @@
 <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
 </a>
         <header id="banner" class="body">
-                <h1><a href="/">Tlapička.net </a></h1>
+                <h1><a href="http://www.tlapicka.net/">Tlapička.net </a></h1>
                 <nav><ul>
-                    <li><a href="/pages/tlapicka.html">O&nbsp;mně</a></li>
-                    <li class="active"><a href="/category/blog.html">Blog</a></li>
-                    <li><a href="/tags.html">Tagy</a></li>
-                    <li><a href="/archives.html">Archiv</a></li>
+                    <li><a href="http://www.tlapicka.net/pages/tlapicka.html">O&nbsp;mně</a></li>
+                    <li class="active"><a href="http://www.tlapicka.net/category/blog.html">Blog</a></li>
+                    <li><a href="http://www.tlapicka.net/tags.html">Tagy</a></li>
+                    <li><a href="http://www.tlapicka.net/archives.html">Archiv</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html" rel="bookmark"
+        <a href="http://www.tlapicka.net/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html" rel="bookmark"
            title="Permalink to Jak automaticky připojovat vzdálené diskové oddíly">Jak automaticky připojovat vzdálené diskové&nbsp;oddíly</a></h1>
     </header>
 
@@ -39,10 +41,10 @@
         </abbr>
 
         <address class="vcard author">
-                By <a class="url fn" href="/author/marek-nozka.html">Marek Nožka</a>
+                By <a class="url fn" href="http://www.tlapicka.net/author/marek-nozka.html">Marek Nožka</a>
         </address>
-<p>In <a href="/category/blog.html">Blog</a>. </p>
-<p>tags: <a href="/tag/linux.html">Linux</a><a href="/tag/ssh.html">SSH</a></p>
+<p>In <a href="http://www.tlapicka.net/category/blog.html">Blog</a>. </p>
+<p>tags: <a href="http://www.tlapicka.net/tag/linux.html">Linux</a><a href="http://www.tlapicka.net/tag/ssh.html">SSH</a></p>
 </footer><!-- /.post-info -->      <h2 id="autofs">Autofs</h2>
 <p>Pomocí Autofs lze zařídit automatické připojení souborového systému při jeho
 prvním použití a jeho automatické odpojení při nečinnosti. Vše se děje na
@@ -147,6 +149,19 @@ na tento adresář &#8220;sáhnul&#8221; a připojili se všechny oddíly. Proto
 <p>Tím je zařízeno, že se moje <code>masina</code> a <code>borec</code> objeví v adresáři <code>/mnt/sshfs</code>,
 i když jsou&nbsp;odpojené.</p>
     </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_identifier = "jak-automaticky-pripojovat-vzdalene-diskove-oddily.html";
+        var disqus_url = "http://www.tlapicka.net/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://blog-tlapicka.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    </div>
 
   </article>
 </section>
@@ -174,6 +189,8 @@ i když jsou&nbsp;odpojené.</p>
                 <div class="social">
                         <h2>social</h2>
                         <ul>
+                            <li><a href="http://www.tlapicka.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="http://www.tlapicka.net/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
 
                             <li><a href="http://github.com/tlapicka">Github</a></li>
                             <li><a href="http://twitter.com/TlapickaNet">Twitter</a></li>
@@ -210,7 +227,7 @@ i když jsou&nbsp;odpojené.</p>
 	})();
 	</script>
 <script type="text/javascript">
-    var disqus_shortname = 'tlapicka';
+    var disqus_shortname = 'blog-tlapicka';
     (function () {
         var s = document.createElement('script'); s.async = true;
         s.type = 'text/javascript';
