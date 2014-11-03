@@ -69,10 +69,11 @@ MD_EXTENSIONS = [
     'linksShortcuts:Shortcuts',
 ]
 
-PIWIK_URL='yanek.cz/piwik'
-PIWIK_SITE_ID=2
+PIWIK_URL = 'yanek.cz/piwik'
+PIWIK_SITE_ID = 2
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
-STATIC_PATHS = ['images', 'img']
+STATIC_PATHS = [ 'img', 'images', 'extra/CNAME' ]
+EXTRA_PATH_METADATA = { 'extra/CNAME': { 'path': 'CNAME' }, }
