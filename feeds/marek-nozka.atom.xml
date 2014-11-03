@@ -121,6 +121,8 @@ příslušné znakové sady. Problém je, že neví, která znaková sada je ta
 &lt;span class="go"&gt;    f.write(cestina)&lt;/span&gt;
 &lt;span class="go"&gt;UnicodeEncodeError: &amp;#39;ascii&amp;#39; codec can&amp;#39;t encode character u&amp;#39;\u010f&amp;#39;&lt;/span&gt;
 &lt;span class="go"&gt;in position 2: ordinal not in range(128)&lt;/span&gt;
+&lt;span class="gt"&gt;Traceback (most recent call last):&lt;/span&gt;
+&lt;span class="err"&gt;File &amp;quot;kodovani.py&amp;quot;, line 30, in &amp;lt;module&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -161,6 +163,8 @@ chybovým&amp;nbsp;hlášením.&lt;/p&gt;
 &lt;span class="err"&gt;File &amp;quot;kodovani.py&amp;quot;, line 12, in &amp;lt;module&amp;gt;&lt;/span&gt;
 &lt;span class="go"&gt;    sys.setdefaultencoding(&amp;quot;utf-8&amp;quot;)&lt;/span&gt;
 &lt;span class="go"&gt;AttributeError: &amp;#39;module&amp;#39; object has no attribute &amp;#39;setdefaultencoding&amp;#39;&lt;/span&gt;
+&lt;span class="gt"&gt;Traceback (most recent call last):&lt;/span&gt;
+&lt;span class="err"&gt;File &amp;quot;kodovani.py&amp;quot;, line 12, in &amp;lt;module&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
