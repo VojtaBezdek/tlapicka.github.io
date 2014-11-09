@@ -81,6 +81,10 @@ hesla, jen na základě klíče.
     :::console
     # ssh user@masina.nekde.tld
 
+Přihlášení je dobré ověřit ještě před konfigurací Autofs. sshfs nebude
+fungovat, pokud uživatel root nebude mít ověřenou identitu serveru. A to se
+děje právě při první přihlášení pomocí SSH.
+
 
 Konfigurace autofs
 ====================
@@ -88,7 +92,7 @@ Konfigurace autofs
 Autofs je třeba nejprve naistalovat:
 
     :::console
-    # aptitude install autofs
+    # aptitude install autofs sshfs
 
 Poté vytvořím soubor s definicemi co a kam se bude připojovat. Řádky jsou
 poměrně dlouhé:
