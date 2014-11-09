@@ -41,13 +41,13 @@ help:
 	@echo '   make serve [PORT=8000]           serve site at http://localhost:8000'
 	@echo '   make devserver [PORT=8000]       start/restart develop_server.sh    '
 	@echo '   make stopserver                  stop local server                  '
-	@echo '   make ssh_upload                  upload the web site via SSH        '
-	@echo '   make rsync_upload                upload the web site via rsync+ssh  '
-	@echo '   make dropbox_upload              upload the web site via Dropbox    '
-	@echo '   make ftp_upload                  upload the web site via FTP        '
-	@echo '   make s3_upload                   upload the web site via S3         '
-	@echo '   make cf_upload                   upload the web site via Cloud Files'
-	@echo '   make github                      upload the web site via gh-pages   '
+#    @echo '   make ssh_upload                  upload the web site via SSH        '
+#    @echo '   make rsync_upload                upload the web site via rsync+ssh  '
+#    @echo '   make dropbox_upload              upload the web site via Dropbox    '
+#    @echo '   make ftp_upload                  upload the web site via FTP        '
+#    @echo '   make s3_upload                   upload the web site via S3         '
+#    @echo '   make cf_upload                   upload the web site via Cloud Files'
+	@echo '   make github [M=Message]    upload the web site to github (ghp-import)'
 	@echo '                                                                       '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html'
 	@echo '                                                                       '
@@ -84,7 +84,6 @@ stopserver:
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
-	unison tlapicka.net
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
@@ -105,7 +104,14 @@ cf_upload: publish
 	cd $(OUTPUTDIR) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .
 
 github: publish
+ifdef M
+	ghp-import -n -b master -m "$(M)" $(OUTPUTDIR)
+else
 	ghp-import -n -b master $(OUTPUTDIR)
-	git push -u origin 
+endif
+	git push -v --all
+
+unison: publish
+	unison tlapicka.net
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github

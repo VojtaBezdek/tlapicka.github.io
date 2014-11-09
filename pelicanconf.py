@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Marek No\u017eka'
 SITENAME = u'Tlapička.net'
-# SITEURL = 'http://tlapicka.net'
+# SITEURL = 'http://www.tlapicka.net'
 
 TIMEZONE = 'Europe/Prague'
 
@@ -24,7 +24,7 @@ TRANSLATION_FEED_ATOM = None
 
 GITHUB_URL = 'https://github.com/tlapicka/tlapicka.github.io'
 # TWITTER_USERNAME = 'TlapickaNet'
-DISQUS_SITENAME = "tlapicka"
+# DISQUS_SITENAME = "blog-tlapicka"
 
 # Blogroll
 LINKS = (
