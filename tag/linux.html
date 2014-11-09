@@ -101,9 +101,12 @@ hesla, jen na základě&nbsp;klíče.</p>
 </pre></div>
 
 
+<p>Přihlášení je dobré ověřit ještě před konfigurací Autofs. sshfs nebude
+fungovat, pokud uživatel root nebude mít ověřenou identitu serveru. A to se
+děje právě při první přihlášení pomocí <span class="caps">SSH</span>.</p>
 <h2 id="konfigurace-autofs">Konfigurace&nbsp;autofs</h2>
 <p>Autofs je třeba nejprve&nbsp;naistalovat:</p>
-<div class="highlight"><pre><span class="gp">#</span> aptitude install autofs
+<div class="highlight"><pre><span class="gp">#</span> aptitude install autofs sshfs
 </pre></div>
 
 
