@@ -29,7 +29,31 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://www.tlapicka.net/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html">Jak automaticky připojovat vzdálené diskové&nbsp;oddíly</a></h1>
+                    <h1 class="entry-title"><a href="http://www.tlapicka.net/nejhezci-vanocni-prani.html">Nejhezčí Vánoční&nbsp;přání</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-12-30T18:21:00">
+                Út 30 prosinec 2014
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="http://www.tlapicka.net/author/marek-nozka.html">Marek Nožka</a>
+        </address>
+<p>In <a href="http://www.tlapicka.net/category/blog.html">Blog</a>. </p>
+<p>tags: <a href="http://www.tlapicka.net/tag/vanoce.html">Vánoce</a></p>
+</footer><!-- /.post-info --><p><a href="http://www.tlapicka.net/img/vanocni_poselstvi.jpg"> <img alt="Nejhezčí Vánoční přání" src="http://www.tlapicka.net/img/vanocni_poselstvi.png" /> </a></p><p>There are <a href="http://www.tlapicka.net/nejhezci-vanocni-prani.html#disqus_thread">comments</a>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Další zápisky</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://www.tlapicka.net/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html" rel="bookmark"
+                           title="Permalink to Jak automaticky připojovat vzdálené diskové oddíly">Jak automaticky připojovat vzdálené diskové&nbsp;oddíly</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-10-31T14:57:00">
                 Pá 31 říjen 2014
@@ -40,117 +64,16 @@
         </address>
 <p>In <a href="http://www.tlapicka.net/category/blog.html">Blog</a>. </p>
 <p>tags: <a href="http://www.tlapicka.net/tag/linux.html">Linux</a><a href="http://www.tlapicka.net/tag/ssh.html">SSH</a></p>
-</footer><!-- /.post-info --><h2 id="autofs">Autofs</h2>
+</footer><!-- /.post-info -->                <h2 id="autofs">Autofs</h2>
 <p>Pomocí Autofs lze zařídit automatické připojení souborového systému při jeho
 prvním použití a jeho automatické odpojení při nečinnosti. Vše se děje na
 základě přednastaveného mapování. Takto lze připojovat vyměnitelné médium,
 Sambu nebo jakékoliv <span class="caps">FUSE</span>. </p>
 <p>O Autofs jsem se dozvěděl náhodou v jedné e-mailové konferenci, kde se řešil
-úplně jiný problém. Mě při této příležitosti napadlo, že si takto můžu připojit
-své vzdálené disky, které jsem zatím, připojoval ručně pomocí příkazu <code>sshfs</code>.
-V tomto zápisku se tedy zaměřím na <a href="http://packages.debian.org/sshfs">sshfs</a>, 
-ale <a href="http://duckduckgo.com/?q=autofs Samba">našel</a> jsem <a href="http://www.howtoforge.com/accessing_windows_or_samba_shares_using_autofs">hezký návod i pro Sambu</a>.</p>
-<h2 id="ssh-klice-pro-roota"><span class="caps">SSH</span> klíče pro&nbsp;Roota</h2>
-<p>Nejprve je třeba zajistit, aby se lokální uživatel <code>root</code> dostal ke vzdálenému
-uživatelskému účtu a nemusel zapisovat heslo &#8212; vše se má dít automaticky. To
-lze zajistit pomocí <span class="caps">SSH</span>&nbsp;klíčů.</p>
-<dl>
-<dt><span class="caps">SSH</span> a <span class="caps">SSH</span>&nbsp;klíče:</dt>
-<dd><a href="http://www.root.cz/serialy/pokrocile-vlastnosti-openssh/">Seriál Pokročilé vlastnosti&nbsp;OpenSSH</a></dd>
-<dd><a href="http://www.root.cz/clanky/jak-se-prihlasovat-na-ssh-bez-zadavani-hesla/">Jak se přihlašovat na <span class="caps">SSH</span> bez zadávání&nbsp;hesla</a></dd>
-<dd><a href="http://www.abclinuxu.cz/clanky/bezpecnost/openssh-vice-nez-jen-secure-shell">OpenSSH - více než jen Secure&nbsp;Shell</a></dd>
-<dd><a href="https://www.abclinuxu.cz/clanky/bezpecnost/openssh-bezpecne-a-pohodlne">OpenSSH - bezpečně a&nbsp;pohodlně</a></dd>
-</dl>
-<p>Vygenerujeme rootovi <a href="http://en.wikipedia.com/wiki/keypair">keypair</a>. Důležité je, aby byl privátní klíč 
-bez <code>passphrase</code>. Při dotazu na <code>passphrase</code> je tedy třeba zadat jen <code>Enter</code>.</p>
-<div class="highlight"><pre><span class="gp">#</span> ssh-keygen -t dsa
-<span class="go">Generating public/private dsa key pair.</span>
-<span class="go">Enter file in which to save the key (/root/.ssh/id_dsa):</span>
-<span class="go">Enter passphrase (empty for no passphrase): </span>
-<span class="go">Enter same passphrase again: </span>
-<span class="go">Your identification has been saved in /root/.ssh/id_dsa.</span>
-<span class="go">Your public key has been saved in /root/.ssh/id_dsa.pub.</span>
-<span class="go">The key fingerprint is:</span>
-<span class="go">03:ca:c2:ae:42:b8:e8:8f:85:b8:fd:2f:7b:5f:a6:7e marek@impala</span>
-<span class="go">The key&#39;s randomart image is:</span>
-<span class="go">+---[DSA 1024]----+</span>
-<span class="go">|                 |</span>
-<span class="go">|                 |</span>
-<span class="go">|      .          |</span>
-<span class="go">| . . . .         |</span>
-<span class="go">|. o o   S        |</span>
-<span class="go">|oo..     .       |</span>
-<span class="go">|+o..      o      |</span>
-<span class="go">|++o . .  +E      |</span>
-<span class="go">|=oooo=.o+.       |</span>
-<span class="go">+-----------------+</span>
-</pre></div>
-
-
-<p>Veřejný klíč je poté třeba dopravit na vzdálený počítač do souboru
-<code>~/.ssh/authorized_keys</code>. Pokud už soubor nějaké klíče obsahuje klíč se
-jednoduše připojí na&nbsp;konec.</p>
-<p>Toto lze zařídit mnoha způsoby. Například&nbsp;takto:</p>
-<div class="highlight"><pre><span class="gp">#</span> ssh user@masina.nekde.tld <span class="s1">&#39;cat &gt;&gt;~/.ssh/authorized_keys&#39;</span> &lt;~/.ssh/id_dsa.pub
-</pre></div>
-
-
-<p>V tomto okamžiku by mělo fungovat přihlášení roota ke vzdálenému počítači bez
-hesla, jen na základě&nbsp;klíče.</p>
-<div class="highlight"><pre><span class="gp">#</span> ssh user@masina.nekde.tld
-</pre></div>
-
-
-<p>Přihlášení je dobré ověřit ještě před konfigurací Autofs. sshfs nebude
-fungovat, pokud uživatel root nebude mít ověřenou identitu serveru. A to se
-děje právě při první přihlášení pomocí <span class="caps">SSH</span>.</p>
-<h2 id="konfigurace-autofs">Konfigurace&nbsp;autofs</h2>
-<p>Autofs je třeba nejprve&nbsp;naistalovat:</p>
-<div class="highlight"><pre><span class="gp">#</span> aptitude install autofs sshfs
-</pre></div>
-
-
-<p>Poté vytvořím soubor s definicemi co a kam se bude připojovat. Řádky jsou
-poměrně&nbsp;dlouhé:</p>
-<p><code>/etc/auto.sshfs</code></p>
-<div class="highlight"><pre>masina  -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#user@masina.tld:/home/user
-borec   -fstype=fuse,allow_other,reconnect,uid=1000,gid=1000 sshfs\#borec@jinde.tld:/home/stud/borec
-</pre></div>
-
-
-<p><code>uid</code> a <code>gid</code> patří uživateli, na kterého se bude připojený souborový systém
-mapovat. Pokud neznáte své <code>uid</code> neznáte stačí spustit příkaz <code>id</code>.</p>
-<p>Takto vytvořený soubor musíme zaregistrovat aby o něm Autofs věděl. To se dá
-zařídit v souboru <code>/etc/auto.master</code>. Na konec jsem přidal&nbsp;řádek:</p>
-<div class="highlight"><pre>/mnt/sshfs   /etc/auto.sshfs --timeout=30
-</pre></div>
-
-
-<p>Nyní je třeba službu restartovat, aby si všimla změn, které jsme provedli v&nbsp;konfiguraci.</p>
-<div class="highlight"><pre><span class="gp">#</span> /etc/init.d/autofs restart
-</pre></div>
-
-
-<h2 id="jak-se-to-pouziva">Jak se to&nbsp;používá?</h2>
-<p>Jednoduše vstoupíte do adresáře <code>/mnt/sshfs/masina</code> nebo si třeba vypíšete
-obsah adresáře <code>/mnt/sshfs/borec</code>. Souborový systém se automaticky připojí
-jakmile na něj sáhnete. &#8230; a po 30 sekundách, co na něj nesáhnete se
-automaticky&nbsp;odpojí.</p>
-<p>Mě ještě trochu točilo, že složka <code>/mnt/sshfs</code> je při odpojených vzdálených
-file-systémech prázdná. Když jsem chtěl její jméno doplnit tabulátorem shell si
-na tento adresář &#8220;sáhnul&#8221; a připojili se všechny oddíly. Proto jsem v souboru
-<code>/etc/default/autofs</code> zapnul/odkomentoval&nbsp;volbu </p>
-<div class="highlight"><pre>BROWSE_MODE=&quot;yes&quot;
-</pre></div>
-
-
-<p>Tím je zařízeno, že se moje <code>masina</code> a <code>borec</code> objeví v adresáři <code>/mnt/sshfs</code>,
-i když jsou&nbsp;odpojené.</p><p>There are <a href="http://www.tlapicka.net/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html#disqus_thread">comments</a>.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Další zápisky</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+úplně jiný ...</p>
+                <a class="readmore" href="http://www.tlapicka.net/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html">read more</a>
+<p>There are <a href="http://www.tlapicka.net/jak-automaticky-pripojovat-vzdalene-diskove-oddily.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
