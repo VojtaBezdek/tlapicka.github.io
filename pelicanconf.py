@@ -13,7 +13,9 @@ DEFAULT_LANG = u'cs'
 DEFAULT_DATE = 'fs'
 DEFAULT_CATEGORY = 'Blog'
 
-THEME = 'notmytlapicka'
+# THEME = 'notmytlapicka'
+THEME = 'notmyidea-cms'
+THEME = 'simplegrey'
 
 TYPOGRIFY = True
 
@@ -28,6 +30,7 @@ GITHUB_URL = 'https://github.com/tlapicka/tlapicka.github.io'
 
 # Blogroll
 LINKS = (
+    ('www.jezisuzdravuje.cz', 'http://www.jezisuzdravuje.cz'),
     ('www.vojtechkodet.cz', 'http://www.vojtechkodet.cz'),
     ('Milujte se', 'http://milujte.se'),
     ('Ron Wyatt', 'http://www.b-a-n.cz/informace.html'),
@@ -43,6 +46,9 @@ LINKS = (
     ('VOŠ a SPŠe Olomouc', 'http://www.spseol.cz/'),
     ('Antispam', 'http://antispam.er.cz/'),
     ('Check I/O', 'http://www.checkio.org/'),
+    ('Oprava trekové obuvy', 'http://www.trekovaobuv.eu/'),
+    ('searchcode.com', 'https://searchcode.com/'),
+    # ('', ''),
 )
 
 # Social widget
@@ -75,5 +81,5 @@ PIWIK_SITE_ID = 2
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
-STATIC_PATHS = [ 'img', 'images', 'extra/CNAME' ]
-EXTRA_PATH_METADATA = { 'extra/CNAME': { 'path': 'CNAME' }, }
+STATIC_PATHS = ['img', 'images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
