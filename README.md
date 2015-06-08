@@ -18,5 +18,8 @@ Pelican
 * <https://github.com/getpelican/pelican/wiki/Tips-n-Tricks>
 * <https://github.com/getpelican/pelican-plugins>
 
+* <https://github.com/jeffskinnerbox/jeffskinnerbox.github.io>
+
+
 [pelican]: http://getpelican.com
 
