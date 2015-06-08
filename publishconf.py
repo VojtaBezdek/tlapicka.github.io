@@ -25,5 +25,8 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
+# TWITTER_USERNAME = 'TlapickaNet'
 DISQUS_SITENAME = "blog-tlapicka"
+
 # GOOGLE_ANALYTICS = ""
+

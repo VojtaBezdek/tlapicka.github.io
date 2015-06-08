@@ -13,9 +13,9 @@ DEFAULT_LANG = u'cs'
 DEFAULT_DATE = 'fs'
 DEFAULT_CATEGORY = 'Blog'
 
-# THEME = 'notmytlapicka'
-THEME = 'notmyidea-cms'
 THEME = 'simplegrey'
+THEME = 'notmyidea-cms'
+THEME = 'notmytlapicka'
 
 TYPOGRIFY = True
 
@@ -25,8 +25,6 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 GITHUB_URL = 'https://github.com/tlapicka/tlapicka.github.io'
-# TWITTER_USERNAME = 'TlapickaNet'
-# DISQUS_SITENAME = "blog-tlapicka"
 
 # Blogroll
 LINKS = (
@@ -81,5 +79,5 @@ PIWIK_SITE_ID = 2
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
-STATIC_PATHS = ['img', 'images', 'extra/CNAME']
+STATIC_PATHS = ['img', 'images', 'extra/CNAME', 'src']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
